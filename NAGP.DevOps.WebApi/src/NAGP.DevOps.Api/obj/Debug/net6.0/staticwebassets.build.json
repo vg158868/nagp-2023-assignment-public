@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/lRLzNSnC3ptZyI/fIJJC7KTGHLDBOzpW+Zd5rXyKIM=",
+  "Source": "NAGP.DevOps.Api",
+  "BasePath": "_content/NAGP.DevOps.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

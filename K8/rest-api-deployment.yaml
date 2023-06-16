@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nagp-rest-api-configmap
+data:
+  DevOpsDbConnectionString: "Data Source=mssql-h,1433;Initial Catalog=NAGP_DevOps;Persist Security Info=True;User ID=SA;MultipleActiveResultSets=True;"
+  
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nagp-rest-api-deployment
+spec:
+  replicas: 4
+  selector:
+   matchLabels:
+    app: nagp-rest-api
+  minReadySeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: nagp-rest-api
+    spec:
+      containers:
+      - name: nagp-rest-api-container
+        image: vg158868/simple-rest-api
+        ports:
+        - name: http
+          containerPort: 5001
+          protocol: TCP
+        env:
+        - name: Settings__DevOpsDbConnectionString
+          valueFrom:
+            configMapKeyRef:
+              name: nagp-rest-api-configmap
+              key: DevOpsDbConnectionString
+        - name: Settings__Secrets__DbPassword
+          valueFrom:
+            secretKeyRef:
+              name: mssql-secrets
+              key: mssql_db_sa_password
+  

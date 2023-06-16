@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mssql-secrets
+data:
+  mssql_db_sa_password: bmFncF92aWthc0AxMjM0
+
+---
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+ name: mssql-pod
+spec:
+ serviceName: mssql-h
+ replicas: 1
+ updateStrategy:
+    type: OnDelete
+ selector:
+    matchLabels:
+     app: mssql-pod
+ template:
+    metadata:
+     name: mssql-pod
+     labels:
+      app: mssql-pod
+    spec:
+      securityContext:
+        fsGroup: 10001
+      containers:
+      - name: mssql
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        env:
+        - name: MSSQL_PID
+          value: "Developer"
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: MSSQL_SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mssql-secrets
+              key: mssql_db_sa_password
+        - name: MSSQL_DATA_DIR
+          value: /var/opt/mssql/mdf
+        - name: MSSQL_LOG_DIR
+          value: /var/opt/mssql/ldf
+        volumeMounts:
+        - name: mssql-base-volume
+          mountPath: /var/opt/mssql
+        - name: mssql-ldf-volume
+          mountPath: /var/opt/mssql/ldf
+        - name: mssql-mdf-volume
+          mountPath: /var/opt/mssql/mdf
+      volumes:
+      - name: mssql-base-volume
+        persistentVolumeClaim:
+          claimName: mssql-base-volume
+      - name: mssql-mdf-volume
+        persistentVolumeClaim:
+          claimName: mssql-mdf-volume
+      - name: mssql-ldf-volume
+        persistentVolumeClaim:
+          claimName: mssql-ldf-volume
+       
+       

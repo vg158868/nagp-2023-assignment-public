@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NAGP.DevOps.Data\NAGP.DevOps.Data.csproj" />
+    <ProjectReference Include="..\NAGP.DevOps.Dto\NAGP.DevOps.Dto.csproj" />
+  </ItemGroup>
+
+</Project>

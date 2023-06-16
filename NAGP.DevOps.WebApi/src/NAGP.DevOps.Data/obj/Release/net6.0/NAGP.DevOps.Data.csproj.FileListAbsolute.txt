@@ -1,0 +1,12 @@
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\bin\Release\net6.0\NAGP.DevOps.Data.deps.json
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\bin\Release\net6.0\NAGP.DevOps.Data.dll
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\bin\Release\net6.0\NAGP.DevOps.Data.pdb
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\NAGP.DevOps.Data.csproj.AssemblyReference.cache
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\NAGP.DevOps.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\NAGP.DevOps.Data.AssemblyInfoInputs.cache
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\NAGP.DevOps.Data.AssemblyInfo.cs
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\NAGP.DevOps.Data.csproj.CoreCompileInputs.cache
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\NAGP.DevOps.Data.dll
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\refint\NAGP.DevOps.Data.dll
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\NAGP.DevOps.Data.pdb
+C:\Users\vikasgupta01\Desktop\NAGP\DevOps\NAGP.DevOps.WebApi\src\NAGP.DevOps.Data\obj\Release\net6.0\ref\NAGP.DevOps.Data.dll
